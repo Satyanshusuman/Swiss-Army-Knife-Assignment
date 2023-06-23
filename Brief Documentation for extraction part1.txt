@@ -1,0 +1,15 @@
+Following are the steps that i would go through while data extraction from given pdf invoice to csv:-
+ 
+1.) First i installed necessary library for this project like pdfplumber,ocrmypdf and imported all other librarieslike (pandas,namedtuple,e.t.c).
+
+2.) i make a object of namedtuple having columns name used in invoice table,then made regex patterns of all criteria on basis of which i can use some selected lines.
+
+3.)made a function which takes pdf path as argument and return json object.
+
+4.) In this function first i extract all text of that pdf invoice then split extracted text into lines .
+now i go for each line and on basis of made regex criteria i apply condition and findout all required values like(doctype,reference,e.t.c).finally i stored all tabular data and header data and made a json object.
+
+5.) i call that function with proper pdf path from this i got  all data as json object and then make a dataframe with header and tabular datas and finally convert this dataframe into csv.
+
+problems fetched :- when i go  through sample pdf i was not accessible to extract text from this pdf actully this was 
+ocr pdf. so i used Ocrmypdf  libraries to make this searchable pdf and then i can easily extract all the text and perform rest of the functions..

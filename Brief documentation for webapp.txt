@@ -1,0 +1,13 @@
+Following are the brief steps that i would go through while making webapp:-
+
+1.) First i Set up a Django project and create a Django app.
+
+2.) I define url for view class for load and extract.
+
+3.)In this Django app's views.py file i imported the necessary libraries like(render,pandas,view) and make view class with get and post function for get and post request.
+
+4.)In get request i simply render a form with input file box and upload button .button will hit post request and apply post function of views.py
+
+5.) In post request first i get requested file from client side then findout file path and then extract data using previous script which is kept in views.py of script app.
+
+6.) finally convert that data into dataframe and then this dataframe into html table and pass this html table as context while rendering extract.html template.
